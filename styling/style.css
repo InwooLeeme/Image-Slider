@@ -1,7 +1,6 @@
 @import "reset.css";
 
-.slider__container,
-ul {
+.slider__container {
   width: 100%;
   height: 90vh;
   display: flex;
@@ -20,18 +19,21 @@ ul {
   position: absolute;
   top: 0;
   z-index: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
-li > .card:nth-child(odd) {
+.card:nth-child(odd) {
   background-color: red;
 }
 
-li > .card:nth-child(even) {
+.card:nth-child(even) {
   background-color: blue;
 }
 
 .showing {
   z-index: 1;
+  opacity: 1;
 }
 
 .title,
